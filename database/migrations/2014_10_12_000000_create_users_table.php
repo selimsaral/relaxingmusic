@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('token')->unique();
             $table->dateTime('token_expiry_date');
             $table->string('app_version');
+            $table->string('lang_version');
             $table->string('app_lang');
             $table->timestamps();
         });

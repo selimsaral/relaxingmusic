@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             "token"             => str_random(32),
             "token_expiry_date" => Carbon::now()->addHour(24),
             "app_version"       => "1.0",
+            "lang_version"      => "1.0",
             "app_lang"          => "TR",
         ]);
 
@@ -27,6 +28,7 @@ class UsersTableSeeder extends Seeder
             "token"             => str_random(32),
             "token_expiry_date" => Carbon::now()->subHour(24),
             "app_version"       => "1.2",
+            "lang_version"      => "1.0",
             "app_lang"          => "EN",
         ]);
 
@@ -35,6 +37,7 @@ class UsersTableSeeder extends Seeder
             "token"             => str_random(32),
             "token_expiry_date" => Carbon::now()->addHour(24),
             "app_version"       => "1.5",
+            "lang_version"      => "1.0",
             "app_lang"          => "TR",
         ]);
 
@@ -43,6 +46,7 @@ class UsersTableSeeder extends Seeder
             "token"             => str_random(32),
             "token_expiry_date" => Carbon::now()->subHour(24),
             "app_version"       => "1.5",
+            "lang_version"      => "1.0",
             "app_lang"          => "EN",
         ]);
 
