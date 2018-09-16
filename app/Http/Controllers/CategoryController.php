@@ -21,6 +21,7 @@ class CategoryController extends Controller
             ]);
 
         } catch (\Exception $exception) {
+            \Log::info($exception);
 
             return response()->json([
                 'errorCode'    => 1,
@@ -47,6 +48,7 @@ class CategoryController extends Controller
                     'result'       => $song_list
                 ]);
             } catch (\Exception $exception) {
+                \Log::info($exception);
 
                 return response()->json([
                     'errorCode'    => 1,

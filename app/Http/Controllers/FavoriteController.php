@@ -24,6 +24,7 @@ class FavoriteController extends Controller
             ]);
 
         } catch (\Exception $exception) {
+            \Log::info($exception);
 
             return response()->json([
                 'errorCode'    => 1,
@@ -56,6 +57,8 @@ class FavoriteController extends Controller
                 ]);
 
             } catch (\Exception $exception) {
+                \Log::info($exception);
+
                 return response()->json([
                     'errorCode'    => 1,
                     'errorMessage' => "Bilinmeyen Bir Sorun Oluştu",
@@ -95,6 +98,8 @@ class FavoriteController extends Controller
                 ]);
 
             } catch (\Exception $exception) {
+                \Log::info($exception);
+
                 return response()->json([
                     'errorCode'    => 1,
                     'errorMessage' => "Bilinmeyen Bir Sorun Oluştu",

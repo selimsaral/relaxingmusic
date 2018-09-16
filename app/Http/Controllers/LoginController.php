@@ -48,6 +48,8 @@ class LoginController extends Controller
                 ]);
 
             } catch (\Exception $exception) {
+                \Log::info($exception);
+
                 return response()->json([
                     'errorCode'    => 1,
                     'errorMessage' => "Bilinmeyen Bir Sorun Oluştu",
