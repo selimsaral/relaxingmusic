@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('login', 'LoginController@index');
 
 Route::group(['middleware' => 'checkToken'], function () {
 
@@ -25,7 +26,8 @@ Route::group(['middleware' => 'checkToken'], function () {
     });
 
     Route::group(['prefix' => 'category'], function () {
-
+        Route::get('list', 'CategoryController@categoryList');
+        Route::get('detail', 'CategoryController@categoryDetail');
     });
 
 });
