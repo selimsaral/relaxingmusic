@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'appuid', 'token', 'app_version', 'app_lang'
+        'appuid', 'token', 'app_version', 'lang_version', 'app_lang'
     ];
 
     public function scopeCheckToken($query, $token)
