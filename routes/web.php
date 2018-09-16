@@ -12,7 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'name'        => env('APP_NAME'),
+        'version'     => env('APP_VERSION'),
+        'author'      => 'Selim SARAL',
+        'description' => env('APP_NAME')
+    ]);
 });
 
 Route::get('login', 'LoginController@index');
