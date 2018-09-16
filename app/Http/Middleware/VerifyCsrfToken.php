@@ -13,6 +13,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     protected $except = [
         '/favorite/add',
-        '/favorite/remove'
+        '/favorite/remove',
+        '/category/detail'
     ];
 }

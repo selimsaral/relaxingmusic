@@ -32,7 +32,7 @@ Route::group(['middleware' => 'checkToken'], function () {
 
     Route::group(['prefix' => 'category'], function () {
         Route::get('list', 'CategoryController@categoryList');
-        Route::get('detail', 'CategoryController@categoryDetail');
+        Route::post('detail', 'CategoryController@categoryDetail');
     });
 
 });
