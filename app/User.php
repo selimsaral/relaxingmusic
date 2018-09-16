@@ -19,9 +19,16 @@ class User extends Authenticatable
         'appuid', 'token', 'app_version', 'app_lang'
     ];
 
-
     public function scopeCheckToken($query, $token)
     {
-        return $query->where('token' , $token)->where('token_expiry_date' , '>=' , Carbon::now());
+        return $query->where('token', $token)->where('token_expiry_date', '>=', Carbon::now());
     }
+
+    public function scopeFavoriteList($query)
+    {
+        return $query->select('songs.*')
+            ->join('favorites', 'users.id', '=', 'favorites.user_id')
+            ->join('songs', 'favorites.song_id', '=', 'songs.id');
+    }
+
 }

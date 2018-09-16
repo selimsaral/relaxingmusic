@@ -17,5 +17,15 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'checkToken'], function () {
-    //
+
+    Route::group(['prefix' => 'favorite'], function () {
+        Route::get('list', 'FavoriteController@favoriteList');
+        Route::post('add', 'FavoriteController@addFavorite');
+        Route::delete('remove', 'FavoriteController@removeFavorite');
+    });
+
+    Route::group(['prefix' => 'category'], function () {
+
+    });
+
 });
